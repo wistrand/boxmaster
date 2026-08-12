@@ -49,5 +49,5 @@ standard disagree, the standard wins.
 
 ## License
 
-No license chosen yet. The character tables restate the Unicode Standard, which
-is itself under the Unicode license.
+MIT. See [LICENSE](LICENSE). The character tables restate the Unicode Standard,
+which is itself under the Unicode license.
