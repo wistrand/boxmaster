@@ -50,6 +50,28 @@ Before returning a figure, check all five:
 4. Padding consistent, one space each side by default.
 5. Content that could be wide (CJK, emoji) measured as wide.
 
+## Large figures
+
+Above roughly twenty rows, or for any figure that overlays elements on a fill, or
+any figure whose content is not ASCII, stop typing rows and generate them.
+
+Build a placement table: for every row, the column and the text of each fragment
+that lands in it. Paint those fragments into a fixed-width buffer one row at a
+time, pad each row to the figure's single width, and confirm every row matches
+that width before showing the figure to anyone. Revising then means changing
+numbers in the table rather than redrawing every row, which is what makes a
+second pass cheap.
+
+- Always compute column positions rather than counting them. One miscounted
+  leading space shifts a label or a border, and nothing below it lines up.
+- Always keep the generator outside this skill. It is scratch work for one
+  figure, never part of what ships, and never written into a user's project
+  unless they ask for it.
+- Never treat a passing width check as a correct figure. It proves the rows are
+  the same length. It says nothing about an element that is missing, drawn twice,
+  or in the wrong place, so read the figure too, and never report a figure as
+  verified for a property that was not the risk.
+
 ## Quick reference
 
 Enough for most figures. Reach for the reference files when the figure needs a

@@ -128,6 +128,6 @@ Two checks that need no tooling:
   is actually drawn there. Most broken figures have a correct-looking junction
   with a wrong arm.
 
-When a figure is large or its content is not ASCII, write a throwaway width
-script outside this skill and run it. Nothing here ships as executable code, and
-nothing here should be pasted and run without reading it first.
+These checks are for figures small enough to inspect. When hand-counting is
+itself the risk, generate the figure instead of typing it; see the large figures
+section of [SKILL.md](../SKILL.md).
